@@ -79,8 +79,7 @@ $('.slider_oldnew').slick({
 	]
 });
 
-	//https://codepen.io/kylerumble/pen/JjPEJmq
-	//$(".slider_oldnew").twentytwenty();
+
 
 
 
@@ -209,7 +208,7 @@ $('.slider_oldnew').on('beforeChange', function(event, slick, currentSlide, next
 
 
 
-// lifehacks from https://tpopovsky.ru/homeworks/web-start---diplom/
+// lifehacks
 var tabsItem = $(".recommendations-item");
 var contentItem = $(".lifehacks-content__item")
 

@@ -3,3 +3,15 @@
 /devgulp/dist
 /devgulp/*.zip
 /mytheme/backup
+/mytheme/img/*.eps
+/mytheme/img/*.psd
+/mytheme/img/*/*.eps
+/mytheme/img/*/*.psd
+
+/mytheme/libs/*/*.zip
+/mytheme/libs/*.zip
+/mytheme/libs/juxtapose-master
+/mytheme/libs/parallaxjs
+/mytheme/libs/rellax
+/mytheme/libs/twentytwenty
+
