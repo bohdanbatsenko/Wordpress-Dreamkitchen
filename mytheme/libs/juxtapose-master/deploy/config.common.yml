@@ -1,0 +1,48 @@
+project_name: juxtapose
+gitdeploy_version: "1.0.5"
+port: 9015
+python: python3.7
+type: flask
+
+# these will be merged with deployment-specific env into init_env
+init_env_common:
+  PROJECT_NAME: "{{ project_name }}"
+  APPLICATION_DOMAINS: "{{ domains }}" # space-delimited
+  FLASK_SECRET_KEY: "{{ vault_flask_secret_key }}"
+  AWS_ACCESS_KEY_ID: "{{ vault_aws_access_key_id }}"
+  AWS_SECRET_ACCESS_KEY: "{{ vault_aws_secret_access_key }}"
+  DROPBOX_APP_KEY: "{{ vault_dropbox_app_key }}"
+  DROPBOX_APP_SECRET: "{{ vault_dropbox_app_secret }}"
+  FLASK_SETTINGS_MODULE: "core.settings"
+  FLASK_SETTINGS_FILE: "core/settings.py"
+
+
+# Flask specific configs
+static_dir: "{{ application_dir }}/static"
+
+application_dir: "{{ deploy_dir }}/website"
+
+nginx_conf: "{{ deploy_dir }}/nginx/conf.d/{{ project_name }}.conf"
+
+# Configs below will not usually change
+deploy_dir: "{{ install_root }}/{{ project_name }}"
+env_file: "{{ deploy_dir }}/.env"
+envrc_file: "{{ deploy_dir }}/.envrc"
+project_repo: "git@github.com:NUKnightLab/{{ project_name }}.git"
+requirements_file: "{{ deploy_dir }}/requirements.txt"
+virtualenv: "{{ virtualenv_root }}/venv"
+wsgi_application: "core.wsgi:application"
+service_name: "{{ project_name }}"
+static_service: "s3"
+static_dest: "s3://{{ static_bucket }}/{{ project_name }}"
+
+# Configs common to all projects
+application_user: apps
+install_root: /home/{{ application_user }}/sites
+virtualenv_root: "{{ deploy_dir }}"
+
+# environment keys must match deployment branch names. Value is the name
+# of the branch to be merged into this environment during deployment.
+supported_envs:
+  stg: master
+  prd: stg

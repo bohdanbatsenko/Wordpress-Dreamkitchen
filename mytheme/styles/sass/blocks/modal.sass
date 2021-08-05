@@ -1,0 +1,84 @@
+.modal
+	position: fixed
+	z-index: 100
+	width: auto
+	top: 5%
+	left: 50%
+	//transform: translate(-50%,-50%)
+	margin: 0 auto
+	display: none
+	background: #dedede
+	padding: 25px
+	@media screen and ( min-width: 1200px)
+		left: 50%
+	@media screen and ( min-width:  992px)
+		left: 40%
+	@media screen and ( min-width:  768px) and ( max-width:  992px)
+		left: 30%
+	@media screen and ( min-width:  576px) and ( max-width:  768px)
+		left: 25%
+	@media screen and ( max-width:  576px)
+		left: 0
+		max-width: 380px
+	@media screen and ( max-width:  400px)
+		left: 0
+		max-width: 380px
+		
+	&.visible
+		display: block
+		animation: fade-slide-in 0.3s ease-out forwards
+	.modal__header
+		padding: 10px 15px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.title
+			font-size: 1.25rem
+			font-weight: bold
+		.close-button
+			cursor: pointer
+			border: none
+			outline: none
+			background: none
+			font-size: 1.25rem
+			font-weight: bold
+	.modal__content
+		//max-width: 380px
+  	padding: 1rem
+		@media screen and ( max-width:  576px)
+			max-width: 420px
+		@media screen and ( max-width:  400px)
+			max-width: 320px
+		.wpcf7-response-output
+			overflow: hidden
+		.wpcf7
+			input
+				@media screen and ( max-width:  576px)
+					max-width: 90%
+
+
+.backdrop
+	position: fixed
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.75)
+	z-index: 10
+	pointer-events: none
+	display: none
+	&.visible
+		display: block
+		pointer-events: all
+
+#add-modal,
+	.add-modal
+	padding: 1rem
+	.modal__content
+
+@keyframes fade-slide-in
+	from
+		transform: translateY(-5rem)
+	to
+		transform: translateY(0)
+

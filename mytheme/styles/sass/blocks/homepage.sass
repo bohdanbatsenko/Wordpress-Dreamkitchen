@@ -1,0 +1,920 @@
+body.page-template-page-home #page
+
+
+
+// .plashka_gradient_70
+// 	position: relative
+// 	&::before
+// 		content: ''
+// 		width: 100%
+// 		height: 100%
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		display: block
+// 		background-image: linear-gradient(to top, rgba(0,0,0,.2), rgba($accent, .3))
+// 		opacity: .7
+
+
+#main_banner
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	position: relative
+	max-height: 670px
+	//overflow: hidden
+	.information_main
+		padding: 120px 0
+		color: #fff
+		h1
+			font-weight: 700
+			margin-bottom: 25px
+			text-transform: uppercase
+			text-shadow: 3px 3px 10px rgba(#000,.85)
+			@media screen and ( min-width:  768px)
+				font-size: 50px
+			@media screen and ( max-width:  768px)
+				font-size: 35px
+				
+		h2
+			font-size: 18px
+			font-weight: 400
+		.discount
+			display: flex
+			align-items: center
+			margin-bottom: 10px
+			.left-discount
+				margin-top: 15px
+				margin-left: 25px
+				p
+					display: block
+					margin-bottom: 10px
+			.right_discount
+				font-size: 80px
+				font-weight: 700
+				color: #fff
+				text-shadow: 0 0 15px rgba($accent,.75)
+		.btn
+			color: #fff
+	
+	.advantages_main_wrap
+		display: flex
+		flex-direction: row
+		justify-content: flex-end
+		@media screen and ( max-width: 992px )
+			transform: translateY(-39%)
+		@media screen and ( max-width: 768px )
+			transform: translateY(-37%)
+		@media screen and ( max-width: 460px )	
+			transform: translateY(-30%)
+		@media screen and ( max-width: 380px )	
+			transform: translateY(-100%)
+			//width: 100%
+		.advantages_main
+			padding: 90px 100px 40px
+			background-color: rgba(darken($accent, 10%),.6)
+			max-width: 450px
+			@media screen and ( max-width: 992px )
+				padding: 20px
+				padding-bottom: 0
+				max-width: 100%
+				width: 100%
+				display: flex
+			ul
+				list-style-type: none
+				margin: 0 auto
+				padding: 0
+				@media screen and ( max-width: 992px )
+					display: flex
+					flex-direction: row
+				@media screen and ( max-width: 380px )
+					//flex-wrap: wrap
+				li
+					display: block
+					margin-bottom: 25px
+					color: #fff
+					text-align: center
+					@media screen and ( max-width: 1200px )
+						margin-bottom: 32px
+					@media screen and ( max-width: 992px )
+						margin-right: 20px
+						margin-bottom: 10px
+						display: inline-block
+						&::last-child
+							margin-right: 0			
+
+					img
+						display: inline-block
+						max-width: 30px
+						margin-bottom: 10px
+						@media screen and ( max-width: 380px )
+							max-width: 30px
+							height: 30px
+							margin-right: 10px
+							margin-bottom: 0
+							&:last-child
+								margin-right: 0
+					b
+						display: block
+						font-size: 20px
+						margin-bottom: 5px
+						@media screen and ( max-width: 768px )
+							font-size: 16px
+						@media screen and ( max-width: 380px )
+							font-size: 10px
+					p
+						font-size: 16px
+						font-weight: 400
+						@media screen and ( max-width: 768px )
+							font-size: 12px
+						@media screen and ( max-width: 460px )
+							display: none
+						@media screen and ( max-width: 380px )
+							display: none
+
+
+
+
+#how_we_work
+	#nav_stages
+		//background-image: linear-gradient(to right, $blue, $dark-blue)
+		background: $blue
+		.wrapper_nav_stages
+			display: flex
+			align-items: center
+			padding: 22px 0
+			position: relative
+			@media screen and(max-width: 768px)
+				display: block
+			h3
+				color: #fff
+				margin-right: 20px
+				font-size: 24px
+				padding: 3px 0
+				@media screen and(min-width: 768px)
+					max-width: 200px
+				@media screen and(max-width: 992px)
+					display: block
+			ul
+				margin: 0
+				padding: 0
+				list-style-type: none
+				display: flex
+				align-items: center
+				@media screen and(max-width: 992px)
+					flex-wrap: wrap
+				li
+					display: inline-flex
+					margin-right: 35px
+					align-items: center
+					position: relative
+					cursor: pointer
+					&.active
+						.img-border
+							opacity: .7
+							img
+								opacity: .7
+					&.active::before
+						content: ''
+						position: absolute
+						display: block
+						left: 0
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 10px 45px 0 45px
+						border-color: $blue transparent transparent transparent	
+						z-index: 9
+						@media screen and(min-width: 992px)
+							bottom: -57px					
+						@media screen and(max-width: 992px)						
+							display: none
+					&:last-child
+						margin-right: 0
+						&::after
+							display: none
+					.img-border
+						text-align: center
+						display: flex
+						border: 1px solid #fff
+						border-radius: 50%
+						padding: 7px
+						margin-right: 10px
+						transition: opacity .3s ease
+						img
+							width: 11px
+							transition: opacity .3s ease
+
+					p
+						transform: translateY(25%)
+						font-size: 16px
+						font-weight: 400
+						color: #fff
+						transition: $trans
+					&::after
+						content: ''
+						position: absolute
+						display: block
+						top: 22px
+						right: -20px
+						background-color: #fff
+						border-radius: 50%
+						width: 5px
+						height: 5px
+						@media screen and(max-width: 768px)
+							display: none
+					&:hover
+						p
+							color: lighten($light-blue, 35%)
+					&.active
+						p
+							color: lighten($light-blue, 35%)
+					@media screen and(max-width: 768px)
+						display: flex
+						flex-direction: column
+						align-items: center
+						flex-wrap: wrap
+.stage
+	padding: 20px 0 0
+	position: relative
+	height: 100%
+	min-height: 100%
+	@media screen and(min-width: 992px)
+		padding: 0
+	.heading
+		margin-bottom: 15px
+		display: flex
+		align-items: flex-end
+		b
+			font-size: 128px
+			font-weight: bold
+			color: $dark-blue
+			//color: lighten($light-blue, 25%)
+			@media screen and(max-width: 768px)
+				font-size: 80px
+				text-overflow: none
+		h3
+			margin-left: 30px
+			font-size: 24px
+			font-weight: 600
+			color: #000
+			padding-bottom: 35px
+			@media screen and(max-width: 768px)
+				font-size: 18px
+				padding-bottom: 25px
+	.description
+		font-size: 14px
+		font-weight: 30px
+		color: #000
+		margin-bottom: 25px
+		@media screen and(max-width: 768px)
+			font-size: 14px
+			
+	.have
+		margin-top: 30px
+
+		b
+			display: block
+			font-size: 20px
+			font-weight: 600
+			color: $dark-blue
+			margin-bottom: 30px
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				margin-right: 20px
+				border: 1px solid lighten($light-blue, 25%)
+				padding: 10px
+				border-radius: 50%
+				&:last-child
+					margin-right: 0
+				img
+					display: inline-block		
+					width: 40px
+					padding: 5px
+	.attention
+		align-items: center
+		//margin-top: 80px
+		margin-bottom: 35px
+		@media screen and ( min-width: 992px )
+			max-width: 400px
+		p
+			font-size: 18px
+			font-weight: 600
+			color: $blue
+
+	.quotes
+		padding: 46px 0
+		background-image: linear-gradient(to right,  $dark-blue, $blue)
+		font-size: 20px
+		font-weight: 400
+		position: relative
+		text-align: center
+		color: #fff
+		p
+		@media screen and ( max-width: 768px )
+			font-size: 14px
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			width: 30px
+			height: 30px
+			display: block
+			background-position: center
+			background-repeat: no-repeat
+			background-size: 100%
+			opacity: .5
+		&::before
+			background-image: url(../img/homepage/quote_left.svg)
+			@media screen and ( min-width: 768px )
+				top: 40px
+				left: 120px
+			@media screen and ( max-width: 768px )
+				top: 10px
+				left: 30px
+		&::after
+			background-image: url(../img/homepage/quote_right.svg)
+			@media screen and ( min-width: 768px )
+				bottom: 40px
+				right: 120px
+			@media screen and ( max-width: 768px )
+				bottom: 10px
+				right: 30px
+
+			
+.stage_1
+	padding: 0
+	.stage_1_bg
+		background-repeat: no-repeat
+		overflow: hidden
+		background-size: contain
+		background-position: bottom right 
+		@media screen and (max-width: 992px) and ( min-width: 768px )
+			background-size: cover
+			background-position-x: 15em
+			background-position-y: 5em
+		@media screen and ( max-width: 768px )
+			background-size: 0
+			background-position: right bottom		
+	.wrapper_img
+		height: 100%
+		position: relative
+		align-items: center
+		@media screen and (min-width: 768px)
+			padding-left: 160px
+			display: flex
+			justify-content: flex-end
+		img
+			display: block
+			max-width: 260px
+			height: auto
+		// .abs_stage_1
+		// 	display: block
+		// 	position: absolute
+		// 	top: 118px
+		// 	right: 0
+		// 	z-index: 1
+		// .img-responsive
+		// 	z-index: 2
+		// 	position: relative
+
+
+.stage_2
+	overflow: hidden
+	.attention
+		display: inline-block
+		width: 100%
+		p
+			font-size: 15px
+	.st2_design
+		.top_st2
+			display: flex
+			justify-content: space-between
+	img
+		display: block
+		width: 100%
+		max-width: 100%
+		@media screen and (max-width: 992px)
+			max-width: 80%
+		@media screen and (max-width: 768px)
+			max-width: 45%
+	img.st2_img
+		@media screen and (max-width: 992px)
+			max-width: 100%
+			width: 100%
+			height: auto
+			object-fit: contain
+			//display: block
+		@media screen and (min-width: 992px)
+			max-width: 420px
+			height: 250px
+			object-fit: cover
+			margin: 0 auto		
+	.small_description
+		margin: 15px 0
+		font-size: 14px
+	.ps
+		font-size: 14px
+
+
+
+.stage.stage_3
+
+.stage_3
+	overflow: hidden
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+	.st3_images
+		max-width: 650px
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		flex-direction: row
+		@media screen and (min-width: 992px)
+			padding-bottom: 35px
+		.st3_item
+			flex: 0 0 180px
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+			img
+
+.stage_4
+	overflow: hidden
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	ul.list_st_4
+		list-style-type: none
+		margin: 0
+		padding: 0
+		@media screen and ( min-width: 992px)
+			display: flex
+			flex-wrap: wrap
+			width: 570px
+			flex: 1
+		li
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			margin-bottom: 18px
+			@media screen and ( min-width: 992px)
+				align-items: center
+				flex: 220px
+				margin-right: 10px
+			&:last-child
+				margin-bottom: 0
+			img
+				width: 50px
+				border: 1px solid $accent
+				padding: 10px
+				border-radius: 50%
+			p
+				margin-left: 10px
+				align-self: flex-end
+				@media screen and ( min-width: 992px)
+					max-width: 200px
+					align-content: center
+					align-self: center
+
+	.attention
+		display: inline-block
+
+
+.stage_5
+	ul.list_st_5
+		list-style-type: none
+		margin: 0
+		padding: 0
+		@media screen and ( min-width: 992px)
+			display: flex
+			align-content: center
+		li
+			.list_st_5_item
+				display: flex
+				align-items: flex-start
+				margin: 20px 0
+				@media screen and (min-width: 992px)
+					margin-right: 20px
+				&::last-child
+					margin-bottom: 0
+				.list_st_5_icon_wrap
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 45px
+					height: 45px
+					border: 1px solid $accent
+					border-radius: 50%
+					position: relative
+					margin-right: 15px
+					flex: 1 0 45px		
+					i
+						display: block
+						color: $accent
+						padding: 10px
+						font-size: 15px
+
+				.ls5_item
+					display: flex
+					flex-direction: column
+					color: #000
+					i
+						font-size: 14px
+					b
+	.before_after_st5
+		@media screen and (min-width: 992px)
+			padding-top: 55px
+		.slider_oldnew
+			margin-top: 20px
+			position: relative
+			.slide_oldnew
+				// display: block
+				// position: relative
+				// width: 100%
+				// height: 100%
+				// min-height: 0
+				// min-width: 0
+				// img
+				// 	display: inline-block
+				// 	max-width: 100%
+				// 	width: 100%
+				// 	height: 100%
+				// width: 540px
+				// height: 330px
+				// position: relative
+			.slide_beforeafterwrap	
+				width: 540px
+				height: 330px
+				position: relative
+				.img-container-after,
+				.img-container-before
+					position: absolute		
+					img
+						width: 540px
+						height: 330px
+						object-fit: cover
+				.img-container-before
+					width: 270px
+					overflow: hidden
+					position: absolute
+				.divider
+					width: .5rem
+					background: white
+					height: 100%
+					z-index: 10
+					position: absolute
+					top: 0
+					left: 50%
+					transform: translate(-50%,0%)
+					pointer-events: none
+
+		/* Стрелки управления */
+		.slider-custom-arrows
+			position: relative
+			.slick-arrow
+				display: inline-block
+				position: absolute
+				top: 50%
+				z-index: 10
+				&::before
+					display: none
+			.slick-prev,
+			.slick-next
+				width: 48px
+				height: 48px
+				border: 2px solid rgba(255,255,255,.5)
+				border-radius: 50%
+				box-sizing: border-box
+
+				i
+					font-size: 25px
+					color: black
+					transition: all .3s ease-in
+				&:hover
+					i			
+						color: #F48E06		
+			.slick-prev
+				@media screen and (min-width: 992px)
+					left: 30%
+				@media screen and (max-width: 992px)
+					left: 35%
+
+			.slick-next
+				@media screen and (min-width: 992px)
+					right: 30%
+				@media screen and (max-width: 992px)
+					right: 35%
+
+			/* Точки управления */
+			.slick-dots
+				display: flex
+				align-items: center
+				justify-content: center
+				transform: translateY(-50%)
+				li
+					list-style-type: none
+					margin: 0 
+					display: flex
+					align-items: center
+					justify-content: center
+					/* Активная точка */
+					&.slick-active
+						button
+							background-color: black
+							width: 10px
+							height: 10px
+							opacity: 1
+					button
+						font-size: 0
+						display: inline-block
+						width: 6px
+						height: 6px
+						background-color: black
+						border-radius: 50%
+						opacity: .3
+						margin: 0
+						padding: 0
+						transition: all .3s ease-in
+						&::before
+							display: none
+
+	.count_btn
+		margin-top: 50px
+		margin-bottom: 25px
+
+
+.stage_6
+	position: relative
+	.st6_slider
+		position: relative
+		padding-bottom: 50px
+		.st6_slide
+			text-align: center
+			position: relative
+			.toping
+				img
+					display: inline-block
+					width: 140px
+					height: 140px
+					border-radius: 50%
+					object-fit: cover
+				.info_user
+					.name
+						p
+						.socials
+				.user_position
+					font-size: 19px
+					margin-bottom: 10px
+					font-weight: 600
+		.slick-dots
+			display: flex
+			align-items: center
+			justify-content: center
+			//transform: translateY(-50%)
+			margin-bottom: 20px
+			li
+				list-style-type: none
+				margin: 0 
+				display: flex
+				align-items: center
+				justify-content: center
+				/* Активная точка */
+				&.slick-active
+					button
+						background-color: black
+						width: 10px
+						height: 10px
+						opacity: 1
+				button
+					font-size: 0
+					display: inline-block
+					width: 6px
+					height: 6px
+					background-color: black
+					border-radius: 50%
+					opacity: .3
+					margin: 0
+					padding: 0
+					transition: all .3s ease-in
+					&::before
+						display: none
+
+
+
+
+#what_we_do
+	padding: 50px 0
+	text-align: center
+	position: relative
+	height: 100%
+	background: rgba(#000,.05)
+	@media screen and ( min-width: 768px )
+		min-height: 700px
+		
+	h3
+		font-size: 30px
+	small
+		font-size: 16px
+		display: inline-block
+		margin-bottom: 40px
+	ul.list_wd
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			text-align: left
+			display: flex
+			align-items: center
+			cursor: pointer
+			img
+				display: block
+				width: 30px
+				margin-right: 15px
+			p
+				color: #000
+		.btn_filled
+			float: left
+			margin-top: 25px
+	.info_list_what
+		@media screen and ( max-width: 992px )
+			margin-top: 30px
+		h4
+		img#change_what_we_do
+		img
+		.time_what
+			margin-top: 25px
+			.img-clock
+				display: inline-block
+				margin-right: 20px
+				width: 30px
+				height: 30px
+
+
+
+#project_main
+	min-height: 600px	
+	padding: 50px 0
+	background-color: #fff
+	position: relative
+	@media screen and ( min-width: 768px )
+		min-height: 600px
+	h2
+		margin-bottom: 20px
+		font-size: 30px
+	.circle
+		margin-bottom: 20px
+	small
+		display: inline-block
+		margin-bottom: 20px
+	.categories
+		position: relative
+		min-height: 120px
+		margin-bottom: 20px
+		overflow: hidden
+		.cat_button
+			cursor: pointer
+			display: inline-block
+			height: 100%
+			margin-right: 12px
+			margin-bottom: 15px
+			transition: all .3s ease-in
+			@media screen and ( max-width:  576px)
+				padding: 10px 12px
+				font-size: 10px
+				&::after
+					display: none
+			&.active
+				background-color: $accent
+	.projects
+		position: relative
+		height: 100%
+		overflow: hidden
+		@media screen and ( min-width: 768px )
+			min-height: 400px
+		.pro_item_wrap
+			margin: 0
+			padding: 10px
+		.pro_item
+			position: relative
+			width: 100%
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			aspect-ratio: 16/9
+			padding: 1.5rem
+			color: #fff
+			backface-visibility: hidden
+			text-decoration: none
+			overflow: hidden
+			@media screen and ( max-width: 992px )
+				min-height: 30vh
+			&:hover
+				.pro_info h4
+					transform: translateX(20px)
+				.arrow
+					opacity: 1
+					transform: translateX(80%)
+			&::after,
+			&::before
+				content: ''
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+			&::before
+				//background: rgba(15,65,75,.9)
+  			//background: linear-gradient(90deg, rgba(0,0,0,.5), rgba(0,0,0,1))
+				transition: opacity .3s linear
+			&::after
+				//background: linear-gradient(45deg, rgba(#FC5445, .7), rgba(#FC5445, 0))
+				background: linear-gradient(to bottom, rgba($blue,.1) 15%, rgba($dark,.7) 78%)
+				opacity: 1
+				transition: opacity .3s linear, linear-gradient .3s linear
+			> *
+				z-index: 1
+			img
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				margin: 0
+				object-fit: cover
+				z-index: 0
+				filter: grayscale(1)
+				transition: filter .2s ease, transform .25s linear
+			.pro_info
+				transform: translateY(2px)
+				h4
+					font-size: 1.5rem
+					line-height: 1.2
+					height: 29px
+					font-weight: 70000
+					letter-spacing: 0.03ch
+					transition: transform .3s ease
+					z-index: 5
+					text-shadow: 5px 4px 5px rgba(#000, .8)
+					word-spacing: nowrap
+					text-overflow: clip
+					overflow: hidden
+			&:focus
+				outline: .5rem solid white
+				outline-offset: -.5rem
+			&:hover :is(.pro_info h4)
+			&:focus :is(.pro_info h4)
+				transform: none
+			&:hover::after,
+			&:focus::after,
+			&:hover::before,
+			&:focus::before
+				opacity: .7
+			&:hover::after
+				background: linear-gradient(45deg, rgba(#FC5445, .7), rgba(#FC5445, 0))
+			&:hover img,
+			&:focus img
+				filter: grayscale(0)
+				transform: scale(1.05) rotate(1deg)
+				
+			.pro_abs
+				// position: absolute
+				// padding: 5px 30px 0
+				// width: 100%
+				// height: 40px
+				// background-image: linear-gradient(to right, rgba($blue, .7), rgba($dark-blue, .8))
+			.arrow
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 5%
+				right: 0
+				transform: translateX(230px)
+				transition: transform .3s linear, opacity .3s ease
+				opacity: 0
+				// width: 100%
+				// height: 50%
+				img
+					display: block
+					top: 0
+					width: 30px
+					height: auto
+	.wrapper_btn
+				
+
+				
+
+
+
+.slider_oldnew

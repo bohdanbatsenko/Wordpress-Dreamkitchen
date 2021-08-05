@@ -1,0 +1,225 @@
+.recommendations 
+	background-color: #ffffff
+	padding: 20px 0px 0px 0px
+	width: 100%
+
+
+.recommendations-title 
+	font-style: normal
+	font-weight: 900
+	font-size: 14px
+	line-height: 20px
+	letter-spacing: 0.5px
+	text-transform: uppercase
+	color: #262D33
+	margin: 0px 0px 20px 25px
+
+
+.recommendations-links 
+	list-style: none
+	padding: 0px
+
+
+.recommendations-item 
+	background-color: transparent
+	cursor: pointer
+
+
+.recommendations-item:nth-child(1) 
+	color: #3BBDC4
+
+
+.recommendations-item:nth-child(2) 
+	color: #6E99AE
+
+
+.recommendations-item:nth-child(3) 
+	color: #AC8EE3
+
+
+.recommendations-item:nth-child(4) 
+	color: #FFA34D
+	padding-bottom: 20px
+
+
+.recommendations-item:nth-child(5) 
+	color: #3DC47E
+	padding-bottom: 14px
+
+
+.recommendations-item::before 
+	content: ''
+	display: block
+	height: 1px
+	background: #D9DADB
+	margin-bottom: 17px
+.recommendations-item--active 
+	background-color: #F5F5F5
+.recommendations-link 
+	text-decoration: none
+	display: flex
+	flex-direction: column
+	color: inherit
+	padding-bottom: 19px
+	padding-left: 25px
+.recommendations__tools 
+	text-transform: uppercase
+	letter-spacing: 0.5px
+	font-style: normal
+	font-weight: 900
+	font-size: 12px
+	line-height: 15px
+	padding-bottom: 8px
+.lifehacks
+	background-color: #E5E5E5
+	position: relative
+.lifehacks-bg 
+	background-color: #262D33
+	//height: 445px
+	width: 100%
+	position: absolute
+.lifehacks-wrap 
+	position: relative
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	border-radius: 10px
+	overflow: hidden
+	max-height: 573px
+.lifehacks-article 
+	position: relative
+	height: 100%
+.lifehacks-article::before 
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	// background: -webkit-gradient(linear, left bottom, left top, from(rgba(64, 48, 61, .35), to(rgba(64, 48, 61, .35)))
+	// background: linear-gradient(0deg, rgba(64, 48, 61, .35), rgba(64, 48, 61, .35))
+.lifehacks-article__text 
+	position: absolute
+	top: 55px
+	left: 55px
+	max-width: 700px
+.lifehacks-img 
+	min-width: 877px
+	height: 100%
+	object-fit: cover
+.lifehacks-tools 
+	color: #4592FF
+	font-style: normal
+	font-weight: 900
+	font-size: 12px
+	line-height: 15px
+	letter-spacing: 0.5px
+	text-transform: uppercase
+.lifehacks-title 
+	font-family: Roboto Slab, sans-serif
+	font-style: normal
+	font-weight: bold
+	font-size: 40px
+	line-height: 50px
+	color: #ffffff
+	margin: 20px 0px 50px 0px
+.lifehacks-content 
+	list-style-type: none
+	padding: 0
+	margin: 0
+.lifehacks-content__item 
+	height: 100%
+	display: none
+.lifehacks-content__item--active 
+	display: block
+.button-read 
+	position: relative
+	padding: 10px 45px 10px 20px
+	color: #ffffff
+	font-style: normal
+	font-weight: 900
+	font-size: 14px
+	line-height: 20px
+	background-color: #4592FF
+	border-radius: 20px
+	border: none
+	cursor: pointer
+	img
+		max-width: 100%
+.button-read__arrow
+	display: inline-block
+	width: 20px
+	position: absolute
+	right: 22px
+	top: 17px
+	bottom: 16px
+@media (max-width: 1200px)
+	.lifehacks-img 
+		min-width: 710px
+	
+@media (max-width: 992px)
+	.lifehacks-img 
+		min-width: 475px
+	
+	.lifehacks-title 
+		font-size: 27px
+	
+	.recommendations-title 
+		font-size: 13px
+	
+	.recommendations__tools 
+		font-size: 11px
+	
+	.recommendations__about 
+		font-size: 13px
+		line-height: 18px
+		
+
+		
+
+
+@media (max-width: 767px)
+	.lifehacks 
+		padding-top: 96px
+	
+	.lifehacks-wrap 
+		flex-direction: column
+		max-height: 100%
+		margin-top: 20px
+	
+	.lifehacks-article 
+		height: 415px
+	
+	.lifehacks-article__text 
+		top: 25px
+		left: 25px
+	
+	.lifehacks-title 
+		margin: 20px 0px 35px 0px
+		font-size: 30px
+		
+	.recommendations-title 
+		font-size: 14px
+		
+	.recommendations__tools 
+		font-size: 12px
+	
+	.recommendations__about 
+		font-size: 14px
+		
+		
+
+@media (max-width: 576px) 
+	.lifehacks 
+		padding-top: 86px
+	
+	.lifehacks-tools 
+		font-size: 11px
+	
+	.lifehacks-title 
+		font-size: 20px
+		line-height: 30px
+		margin: 23px 0px 30px 0px
+		
+
+	

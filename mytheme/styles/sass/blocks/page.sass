@@ -1,0 +1,255 @@
+.page
+
+	
+	
+.page-header
+	padding: 50px 0
+	margin-bottom: 35px
+	position: relative
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		//z-index: 1
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		z-index: -1
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			//background: linear-gradient(to bottom, rgba(#003F5F,.1), rgba(#003F5F,.7))
+	&-content
+		.entry-title
+			color: #fff
+		h2
+			display: inline-block
+			padding: 15px 25px
+			background: rgba(#000,.35)
+			color: #fff
+			z-index: 999
+
+
+.single.single-post
+	#page
+		.archive-post-wrapper
+			.post-thumbnail
+				img
+					margin-bottom: 30px
+			.entry-header
+				.entry-meta
+					margin: 15px 0
+
+.navigation.post-navigation
+	.nav-links
+		.nav-previous
+			a
+				display: inline-block
+				padding: 12px 12px 12px 35px
+				border: 1px solid #000
+				border-radius: 25px
+				position: relative
+				&::before
+					content: '\f053'
+					display: inline-block
+					position: absolute
+					top: 0
+					left: 0
+					transform: translateY(50%)
+					font-family: FontAwesome
+					font-size: 16px
+					margin-left: 10px
+					
+		.nav-next
+			a
+				display: inline-block
+				padding: 12px 35px 12px 12px
+				border: 1px solid #000
+				border-radius: 25px
+				position: relative
+				&::before
+					content: '\f054'
+					display: inline-block
+					position: absolute
+					top: 0
+					right: 0
+					transform: translateY(50%)
+					font-family: FontAwesome
+					font-size: 16px
+					margin-right: 10px
+					
+
+.page-template
+	#page
+		article
+			margin-bottom: 30px
+			.info_article
+				a.link_article				
+					display: inline-block
+					padding: 12px 35px 12px 12px
+					border: 1px solid #000
+					border-radius: 25px
+					position: relative
+					&::before
+						content: '\f054'
+						display: inline-block
+						position: absolute
+						top: 0
+						right: 0
+						transform: translateY(50%)
+						font-family: FontAwesome
+						font-size: 16px
+						margin-right: 10px
+		.wrapper_btn
+			#more_posts
+				cursor: pointer		
+
+
+// sidebar
+.widget-area
+	ul
+		list-style-type: none
+		transform: translateZ(0)
+		backface-visibility: hidden
+		@media screen and ( max-width: 992px )
+			margin-left: 0
+		li
+			position: relative
+			display: inline-block
+			width: 100%
+			transition: all .3s ease
+			cursor: pointer
+			// backface-visibility: hidden
+			// transform: translateZ(0)
+			// margin: 0
+			// will-change:top
+			// -webkit-backface-visibility: hidden
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: -18px
+				transform: translate(-50%, -50%)
+				display: block
+				width: 12px
+				height: 15px
+				background-image: url(../img/angle.svg)
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				transition: all .3s ease-in
+			&:hover
+				margin-left: 12px
+				a
+					color: $accent
+				&::before
+					left: -12px
+			a
+				color: #000
+	.widget-title
+		@media screen and ( max-width: 992px )
+			font-size: 18px
+			
+	.widget_categories
+	
+
+
+
+
+
+
+
+// Blog page - category-3.php
+.blog
+	padding-bottom: 80px
+	.wrapper_services
+		article
+			@media screen and ( max-width: 992px )
+				margin-bottom: 130px
+			img
+				@media screen and ( max-width: 992px )
+					margin-bottom: 15px
+
+// archive.php
+.archive
+	.archive-wrapper
+		display: flex
+		flex-wrap: wrap
+		article
+			flex: 30% 0 0
+			margin-right: 15px
+			border: 1px solid #000
+			@media screen and ( max-width: 992px )
+				flex: 200px
+			// min-height: 100%
+			// max-height: 100%
+			.archive-post-wrapper
+				display: flex
+				flex-direction: column
+
+				height: 100%
+
+				.archive-post-thumbnail
+					a
+						.custom-bg
+							background-size: cover
+							background-position: center
+							background-repeat: no-repeat
+							width: 100%
+							height: 100%
+							padding-bottom: 70%
+							display: block
+							object-fit: cover
+
+				.archive-post-content
+					height: 100%
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					//align-content: flex-end
+					padding: 10px
+					flex: 1
+					.entry-header
+					.entry-content
+					.entry-footer
+						//display: block
+						//align-self: flex-end
+						margin-top: auto
+						padding-top: 15px
+
+
+	// category.php
+.archive.category
+	.category-archive-post
+		display: flex
+		padding: 15px 5px
+		flex: 1 0 0
+		@media screen and ( max-width: 768px )
+			flex-direction: column
+		&-thumbnail
+			flex: 40% 0 0
+			height: 100%
+			@media screen and ( max-width: 992px )
+				margin-bottom: 20px
+			.custom-bg
+				background-size: cover
+				background-position: center
+				background-repeat: no-repeat
+				width: 100%
+				height: 100%
+				padding-bottom: 100%
+				display: block
+				object-fit: cover
+			//@media screen and ( min-width: 768px ) and (max-width: 992px)
+
+			@media screen and ( min-width: 768px )
+				margin-right: 20px
+			
+		&-content

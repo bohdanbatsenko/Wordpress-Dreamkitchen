@@ -1,0 +1,112 @@
+// USER VARIABLES SECTION
+
+$accent: #17a912// Accent Color
+$light-blue: #18a739
+$dark-blue: #66c618
+$blue: #138a0f
+$dark: #4a9b13
+$grey: #595959
+$orange: #eb760a
+$trans: all .5s ease-in-out
+
+
+// $accent: #0093B7 // Accent Color
+// $light-blue: #63CDD7
+// $dark-blue: #001B29
+// $blue: #003F5F
+// $dark: #202D32
+// $grey: #595959
+// $trans: all .5s ease-in-out
+
+
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$default-font: "Open Sans", sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import '../../../devgulp/node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import '../../../devgulp/node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+//@import '../../../devgulp/node_modules/bootstrap/dist/css/bootstrap-grid.min.css' 
+@import '../../../devgulp/node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+//@import '../../fonts/fontawesome/css/fontawesome.min.css'
+@import '../../fonts/fontawesome/css/all.min'
+@import '../../fonts/fontawesome/css/fontawesome.min'
+//@import '../../libs/juxtapose-master/build/css/juxtapose.css'
+//@import '../../libs/twentytwenty/css/twentytwenty.css'
+@import '../../libs/slick/slick/slick.css'
+@import '../../libs/slick/slick/slick-theme.css'
+@import '../../libs/fancybox/dist/jquery.fancybox.min.css'
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+//fancybox, animate, slick.css, slick-theme.css, wow js
+
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('fontawesome-solid', normal, 900, '../fonts/fontawesome/webfonts/fa-solid-900.woff2')
+@include font('fontawesome-regular', regular, 400, '../fonts/fontawesome/webfonts/fa-regular-400.woff2')
+@include font('fontawesome-brands', normal, 400, '../fonts/fontawesome/webfonts/fa-brands-400.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+html, body
+	height: 100%
+
+
+img
+	max-width: 100%
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.container
+	//width: 1340px!important
+	//min-width: 1200px
+body
+	font-family: $default-font
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	height: 100vh
+	min-height: 100%
+html
+	overflow: hidden
+	//overflow-x: hidden
+	// overflow-y: hidden
+
+

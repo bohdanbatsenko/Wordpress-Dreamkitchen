@@ -1,0 +1,175 @@
+.site-footer
+	padding: 45px 0 55px 0
+	background: $blue
+	.footer-branding
+		@media screen and ( min-width: 992px)
+			border-right: 1px solid #fff
+			height: 100%
+			margin-top: 15px		
+		.logo
+			img
+				display: block
+				max-width: 105px
+				padding-bottom: 18px
+				@media screen and (min-width:960px)
+		.descr
+			max-width: 200px
+			color: #fff
+			font-size: 12px
+		.wrapper_social_in_footer
+			display: flex
+			align-items: center
+			padding: 15px 0
+			@media screen and (max-width:768px)
+				//align-self: end
+				//flex-direction: column
+				//justify-content: flex-start
+				//margin-right: auto
+			.cont_in_footer
+				@media screen and (min-width:992px)
+					margin-right: 30px
+				@media screen and (min-width:768px) and (max-width:960px)
+					margin-right: 10px
+				@media screen and (max-width:768px)
+					align-self: start
+					margin-right: 10px
+					margin-bottom: 10px
+					&::last-child
+						margin-bottom: 0
+				.cih_left
+					display: flex
+					text-align: center
+					text-decoration: none
+					&:hover
+						i
+							color: $light-blue
+							border: 1px solid $light-blue
+					i
+						display: inline-block
+						width: 40px
+						height: 40px
+						color: #fff
+						font-size: 18px
+						border: 1px solid #fff
+						border-radius: 50%
+						padding: 10px
+						transition: $trans
+	.footer-categories-wrap
+		@media screen and ( min-width: 992px)
+			padding-right: 20px
+			border-right: 1px solid #fff
+			height: 100%
+		.footer-header
+			margin-top: 15px
+			h4
+				color: lighten($accent,15%)
+				margin-bottom: 15px
+		.footer-categories
+			ul
+				list-style-type: none
+				margin: 0
+				padding: 0
+				column-count: 2
+				li
+					padding-bottom: 5px
+					&::last-child
+						padding-bottom: 0
+					a
+						color: #fff
+						font-size: 12px
+						cursor: pointer
+	.footer-customer-wrap
+		@media screen and ( min-width: 992px)
+			border-right: 0.5px solid #fff
+			height: 100%
+		@media screen and ( max-width: 768px)
+			padding-top: 25px
+		.footer-header
+			margin-top: 15px
+			h4
+				color: lighten($accent,15%)
+				margin-bottom: 14px	
+		.footer-customer
+			.footer-customer-list
+				list-style-type: none
+				margin: 0
+				padding: 0
+				margin-bottom: 30px
+
+				.menu-item
+					font-size: 12px
+					display: block
+					margin-bottom: 8px
+					a
+						color: #fff
+
+			.cont_in_footer
+				display: flex
+				align-items: center
+				color: #fff
+				text-decoration: none
+				line-height: 1.15
+				margin-bottom: 25px
+				@media screen and (min-width:960px)
+					margin-right: 15px
+				@media screen and (max-width:768px)
+					display: none
+				&:hover
+					.cih_left
+						color: $light-blue
+						.fas
+							border: 1px solid $light-blue
+					.cih_right
+						color: $light-blue
+				>.cih_left
+					margin-right: 10px
+					transition: $trans
+					.fas
+						font-size: 18px
+						border: 1px solid #fff
+						border-radius: 50%
+						padding: 10px
+						transition: $trans
+				>.cih_right
+					color: #fff
+					transition: $trans
+					>.cih_small
+						font-size: 10px
+						font-weight: 300
+						margin-bottom: 5px
+						@media screen and (max-width:960px)
+							display: none
+					>.cih_main
+						font-size: 14px
+						font-weight: 700
+						margin-bottom: 10px
+			.developed
+				color: #fff
+				a
+					color: rgba(255,255,255,.6)
+
+
+	.footer-company-wrap
+		@media screen and ( max-width: 768px)
+			padding-top: 25px	
+		.footer-header
+			margin-top: 15px
+			h4
+				color: lighten($accent,15%)
+				margin-bottom: 15px	
+		.footer-company
+			.footer-company-list
+				list-style-type: none
+				margin: 0
+				padding: 0
+				margin-bottom: 30px
+				.company-link
+					display: inline-block
+					color: #fff
+					margin-bottom: 8px
+					font-size: 12px
+			.footer-address
+				color: #fff
+				font-size: 12px
+
+
