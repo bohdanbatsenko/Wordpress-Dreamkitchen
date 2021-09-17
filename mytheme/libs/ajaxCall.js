@@ -2,6 +2,7 @@
 
 var page = 2;
 $(document).ready(function(){
+
 	$('body').on('click', '#more_posts', function() {
 		let template = $(this).data('template');
 		let data = {
@@ -22,11 +23,11 @@ $(document).ready(function(){
 			}
 		});
 	});
-	});
+
 
 
 	
-	$(document).ready(function(){
+
 var page1 = 2;
 
 	$('body').on('click', '.cat_button', function() {
@@ -34,6 +35,17 @@ var page1 = 2;
 		var template = 'very';
 		var mayThis = $(this);
 		var link = $(this).data('link');
+
+		// reset to all
+		$('#reset_all').click(function() {
+			$(this).attr("data-id",3);
+			// $(this).link.textContent('');
+			$('.cat_button').not(mayThis).removeClass('active');
+			$(this).addClass('active');
+			// $('.cat_button').not(mayThis).removeAttr('data-link');
+			// $('.cat_button').not(mayThis).removeAttr('data-id');
+		})
+
 		$('#go_to_rz').attr('href', link);
 		var data = {
 			'action': 'load_posts_by_ajax_callback',
@@ -53,6 +65,10 @@ var page1 = 2;
 			}
 		});
 	});
+
+
+
+
 });
 
 

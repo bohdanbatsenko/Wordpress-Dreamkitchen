@@ -7,7 +7,7 @@
 		<span class="pro_abs">
 			<span class="pro_info">
 				<h4><?php the_title(); ?></h4>
-				<!--span class="price"><!--?php the_field('стоимость_проекта'); ?> </span-->
+				<!--span class="price"--><!--?php the_field('стоимость_проекта'); ?> </span-->
 				<span class="pro_line">
 					<span class="small_line"></span>
 				</span>

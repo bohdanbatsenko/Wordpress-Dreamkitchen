@@ -169,12 +169,7 @@ body.page-template-page-home #page
 					align-items: center
 					position: relative
 					cursor: pointer
-					&.active
-						.img-border
-							opacity: .7
-							img
-								opacity: .7
-					&.active::before
+					&::before
 						content: ''
 						position: absolute
 						display: block
@@ -185,6 +180,17 @@ body.page-template-page-home #page
 						border-width: 10px 45px 0 45px
 						border-color: $blue transparent transparent transparent	
 						z-index: 9
+						opacity: 0
+						transform: translateY(-50px)
+						transition: transform .3s ease-out			
+					&.active
+						.img-border
+							opacity: .7
+							img
+								opacity: .7
+					&.active::before
+						opacity: 1
+						transform: translateY(0)
 						@media screen and(min-width: 992px)
 							bottom: -57px					
 						@media screen and(max-width: 992px)						
@@ -204,13 +210,15 @@ body.page-template-page-home #page
 						img
 							width: 11px
 							transition: opacity .3s ease
+					.tab_descr
+						p
+							transform: translateY(25%)
+							font-size: 16px
+							font-weight: 400
+							color: #fff
+							transition: $trans
 
-					p
-						transform: translateY(25%)
-						font-size: 16px
-						font-weight: 400
-						color: #fff
-						transition: $trans
+							white-space: nowrap
 					&::after
 						content: ''
 						position: absolute

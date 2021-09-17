@@ -85,27 +85,39 @@ get_header('home');
 			<ul class="buttons_tab">
 				<li data-stage="stage_1">
 					<div class="img-border"><img src="<?php bloginfo('template_url'); ?>/img/homepage/how_we_work/measure_triangle.svg" class="img-responsive" alt=""></div>
+					<div class="tab_descr">
 					<p>Замеры</p>
+					</div>
 				</li>
 				<li data-stage="stage_2">
 					<div class="img-border"><img src="<?php bloginfo('template_url'); ?>/img/homepage/how_we_work/design.svg" class="img-responsive" alt=""></div>
+					<div class="tab_descr">
 					<p>Дизайн</p>
+					</div>
 				</li>
 				<li  data-stage="stage_3">
 					<div class="img-border"><img src="<?php bloginfo('template_url'); ?>/img/homepage/how_we_work/manufacturing.svg" class="img-responsive" alt=""></div>
+					<div class="tab_descr">
 					<p>Изготовление</p>
+					</div>
 				</li>
 				<li data-stage="stage_4">
 					<div class="img-border"><img src="<?php bloginfo('template_url'); ?>/img/homepage/how_we_work/transport.svg" class="img-responsive" alt=""></div>
-					<p>Доставка</p>
+					<div class="tab_descr">
+					<p>Доставка и оплата</p>
+					</div>
 				</li>
 				<li data-stage="stage_5">
 					<div class="img-border"><img src="<?php bloginfo('template_url'); ?>/img/homepage/how_we_work/portfolio.svg" class="img-responsive" alt=""></div>
+					<div class="tab_descr">
 					<p>Наши проекты</p>
+					</div>
 				</li>
 				<li data-stage="stage_6">
 					<div class="img-border"><img src="<?php bloginfo('template_url'); ?>/img/homepage/how_we_work/reviews.svg" class="img-responsive" alt=""></div>
+					<div class="tab_descr">
 					<p>Отзывы</p>
+					</div>
 				</li>
 			</ul>
 			</div> <!-- wrapper_nav_stages -->
@@ -746,9 +758,16 @@ get_header('home');
 	<div class="container">
 		<h2>6 новых выполненных проектов</h2>
 		<div class="circle"></div>
-		<?php $userposts = get_posts('cat=3&showposts=-1'); $count=count($userposts); ?>
+		<?php 
+			$userposts = get_posts('cat=3&showposts=-1'); 
+			$count=count($userposts); ?>
 		<small><b>6</b> новых выполненных проектов из более 70! <b><?php echo $count; ?></b></small>
 		<div class="categories">
+			
+			<!-- this is where the problem is: how to make SHOW ALL button work -->
+		<div class="btn btn_dark cat_button" data-link="#" data-id="all-posts" id="reset_all">Все работы</div>
+			<!--  -->
+
 			<?php
 				$categories = get_categories(
 					array( 'parent' => 3)
@@ -793,7 +812,7 @@ get_header('home');
 								<?php endwhile; ?>
 								<?php endif; ?>
 
-								<!--?php wp_reset_postdata(); ?-->	
+								<?php wp_reset_postdata(); ?>	
 						
 			</div><!-- row -->
 		</div> <!-- projects -->	
